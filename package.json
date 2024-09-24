@@ -6,8 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "prepare": "npm run build",
-    "build": "ttsc -b tsconfig-build.json",
-    "test": "TS_NODE_COMPILER=ttypescript mocha --opts mocha.opts",
+    "build": "tsc -b tsconfig-build.json",
+    "test": "mocha --config mocha.config.js",
     "lint": "tslint src/*.ts",
     "format": "tslint src/*.ts --fix"
   },
@@ -31,9 +31,9 @@
   "homepage": "https://github.com/TSiege/knack-sdk#readme",
   "devDependencies": {
     "@types/node": "^13.1.8",
+    "mocha": "^10.7.3",
     "ts-node": "^8.6.2",
     "tslint": "^5.20.1",
-    "ttypescript": "^1.5.10",
     "typescript": "^3.7.5"
   },
   "dependencies": {
